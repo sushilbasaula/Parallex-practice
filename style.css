@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* hero section  */
+.hero {
+  min-height: 90vh;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -2;
+}
+
+.hero > .ball {
+  background: linear-gradient(red, yellow);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+
+  /* position: relative; */
+  top: 300px;
+  left: 50px;
+
+  z-index: -1;
+}
+
+.hero > div {
+  position: absolute;
+  top: 30vh;
+  left: 10vw;
+  background: rgba(255, 255, 255, 0.206);
+  width: 450px;
+  padding: 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.down-arrow {
+  font-size: 3rem;
+  position: absolute;
+
+  right: 50vw;
+
+  transform: rotate(90deg);
+
+  animation: go-down 1s infinite ease-out;
+}
+
+@keyframes go-down {
+  0% {
+    bottom: 100px;
+    color: yellow;
+  }
+  50% {
+    color: red;
+  }
+
+  100% {
+    bottom: 1px;
+    color: purple;
+  }
+}
+
+/* nav section  */
+nav {
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+nav ul li {
+  transition: all 0.5s;
+}
+
+nav ul li:hover {
+  color: #ff0000;
+  /* zoom: 2; */
+  transform: scale(1.3);
+
+  cursor: pointer;
+
+  /* background: green; */
+}
+
+/* section  */
+
+/* .s1,
+.s2,
+.s3,
+.s4 {
+  height: 60vh;
+} */
+/* or use attribute selector  */
+[class^="s"] {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s1 {
+  background: url(./assets/a.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.s2 {
+  background: url(./assets/b.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.s3 {
+  background: url(./assets/c.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.s4 {
+  background: url(./assets/a.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title {
+  background: rgba(0, 0, 0, 0.618);
+  color: white;
+  font-size: 2rem;
+  padding: 1.4rem 5rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+/* footer */
+
+footer {
+  background: #000;
+  color: white;
+  padding: 3rem;
+  text-align: center;
+}
